@@ -15,6 +15,8 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - database2:/var/lib/mysql
+- name: Buildpack CI
+  uses: buildpack-ci/run-tests@v1-beta1
 
   php:
     build: ./
